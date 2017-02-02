@@ -1,0 +1,23 @@
+<!--<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">-->
+    <md-toolbar class="md-tall md-hue-2">
+        <span flex></span>
+        <div layout="column" class="md-toolbar-tools-bottom inset">
+            <user-avatar></user-avatar>
+            <span></span>
+            <div>{{user.username}}</div>
+            <div>{{user.email}}</div>
+        </div>
+    </md-toolbar>
+    <md-list>
+        <md-list-item ng-repeat="year in menu">
+            <a>
+                <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                    <div class="inset">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                    </div>
+                    <div class="inset">{{year.year}}</div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+    </md-list>
+<!--</md-sidenav>-->

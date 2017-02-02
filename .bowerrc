@@ -1,0 +1,5 @@
+{
+  "directory": "app/bower_components",
+  "proxy": "http://10.114.8.100:8080",
+  "https-proxy": "http://10.114.8.100:8080"
+}

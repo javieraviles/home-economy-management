@@ -1,15 +1,15 @@
 'use strict';
 
-describe('economyApp.dashboard module', function() {
+describe('economyApp.year module', function() {
 
-  beforeEach(module('economyApp.dashboard'));
+  beforeEach(module('economyApp.year'));
 
-  describe('dashboard controller', function(){
+  describe('year controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
-      var dashboardCtrl = $controller('DashboardCtrl');
-      expect(dashboardCtrl).toBeDefined();
+      var yearCtrl = $controller('YearCtrl');
+      expect(yearCtrl).toBeDefined();
     }));
 
   });

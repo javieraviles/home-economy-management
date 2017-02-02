@@ -1,17 +1,17 @@
 'use strict';
 
-angular.module('economyApp.dashboard', ['ui.router'])
+angular.module('economyApp.year', ['ui.router'])
 
 .config(['$stateProvider', function($stateProvider) {
-  $stateProvider.state('economy.dashboard', {
-    url: '/dashboard',
-    templateUrl: 'dashboard/dashboard.html',
-    controller: 'DashboardCtrl',
+  $stateProvider.state('economy.year', {
+    url: '/year:id',
+    templateUrl: 'year/year.html',
+    controller: 'YearCtrl',
     hideToolbar: false,
     hideSidenav: false
   });
 }])
 
-.controller('DashboardCtrl', [function() {
+.controller('YearCtrl', [function() {
    
 }]);

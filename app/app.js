@@ -11,7 +11,7 @@ angular.module('economyApp', [
   'economyApp.login',
   'economyApp.login.services',
   'economyApp.login.directives',
-  'economyApp.dashboard'
+  'economyApp.year'
 ]).
 
 config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {

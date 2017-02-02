@@ -39,7 +39,7 @@ angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
                     case 200:
                     case 304:
                         $rootScope.user = response.data;
-                        $state.go('economy.dashboard', { "id": $rootScope.user.lastYearId});
+                        $state.go('economy.year', { "id": $rootScope.user.lastYearId});
                         break;
                         
                     default:

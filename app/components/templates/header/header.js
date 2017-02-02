@@ -12,7 +12,9 @@ angular.module('economyApp.header', ['ngMaterial'])
     };
     
     $scope.logout = function (){
-        $rootScope.user = "";
+        
+        delete $rootScope.user;
         $state.go('economy.login');
+        
     }
 }]);

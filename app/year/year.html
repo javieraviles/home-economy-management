@@ -1,3 +1,16 @@
 <md-content flex layout="row" ng-cloak="ng-cloak">
+    <div flex>
+        <h3>{{currentYear.label}} - savings: {{currentYear.savings}}</h3>
+    </div>
+    <div flex>
+      <md-card flex="33" ng-repeat="month in currentYear.months" md-theme='primary' md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{month.label}}</span>
+            <span class="md-subhead">{{month.savings}}</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
     
 </md-content>

@@ -9,13 +9,13 @@
         </div>
     </md-toolbar>
     <md-list>
-        <md-list-item ng-repeat="year in menu">
-            <a>
+        <md-list-item ng-repeat="year in menu.years track by year.id">
+            <a flex class="md-button" ui-sref="economy.year({id:{{year.id}}})">
                 <md-item-content md-ink-ripple layout="row" layout-align="start center">
                     <div class="inset">
                         <ng-md-icon icon="dashboard"></ng-md-icon>
                     </div>
-                    <div class="inset">{{year.year}}</div>
+                    <div class="inset">{{year.label}}</div>
                 </md-item-content>
             </a>
         </md-list-item>

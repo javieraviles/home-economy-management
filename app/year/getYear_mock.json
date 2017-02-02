@@ -1,0 +1,24 @@
+{
+    "year": {
+        "id":1,
+        "label":"2017",
+        "savings":"12344.12",
+        "months": [
+            {
+                "label":"January",
+                "id":"1",
+                "savings":"603.5"
+            },
+            {
+                "label":"February",
+                "id":"2",
+                "savings":"202"
+            },
+            {
+                "label":"March",
+                "id":"3",
+                "savings": "543.52"
+            }
+        ]
+    }
+}

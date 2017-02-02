@@ -6,27 +6,13 @@ angular.module('economyApp.menu', [])
 .controller('MenuCtrl', ['$scope','$state', '$rootScope',function($scope, $state, $rootScope) {
     
     $scope.state = $state;
+    $rootScope.user ? $scope.menu = $rootScope.user.menu : $scope.menu = "";
     
-    $scope.menu = 
-          [   
-                {
-                  year: '2016', 
-                  id: '1',
-                  months: 
-                    [
-                        {month: 'January',id: '1'},
-                        {month: 'February',id: '2'},
-                        {month: 'March',id: '3'}
-                    ]
-                },
-                {
-                  year: '2017', 
-                  id: '2',
-                  months: 
-                    [
-                        {month: 'January',id: '1'},
-                        {month: 'February',id: '2'}
-                    ]
-              },
-          ]
+    $scope.$on('user-logged-in-successfully', function() {
+
+        $scope.menu = $rootScope.user.menu;
+        
+    });
+    
+    
 }]);

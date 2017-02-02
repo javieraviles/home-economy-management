@@ -10,7 +10,7 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       'app.services.js',
       'components/**/*.js',
-      'dashboard/**/*.js',
+      'year/**/*.js',
       'login/**/*.js'
     ],
 

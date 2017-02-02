@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('economyApp.year', ['ui.router'])
+angular.module('economyApp.year', ['ui.router','economyApp.year.services'])
 
 .config(['$stateProvider', function($stateProvider) {
   $stateProvider.state('economy.year', {
@@ -12,6 +12,19 @@ angular.module('economyApp.year', ['ui.router'])
   });
 }])
 
-.controller('YearCtrl', [function() {
-   
+.controller('YearCtrl', ['$scope', '$stateParams','yearService',function($scope, $stateParams, yearService) {
+    
+    $scope.currentYear = "";
+    
+    yearService.getYear($stateParams.id)
+        .then(function(response){
+
+            $scope.currentYear = response.data.year;
+
+        },function(error){
+
+            console.log(error);
+
+        });
+    
 }]);

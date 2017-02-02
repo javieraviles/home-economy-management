@@ -1,0 +1,42 @@
+<md-content flex layout="row" layout-align="center center" layout-padding="layout-padding" ng-cloak="ng-cloak" id="login-box">
+    <md-card flex flex-gt-sm="50" flex-gt-md="33">
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">Economy App</span>
+                <span class="md-subhead">Sign in</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <form name="loginForm" ng-submit="login()" novalidate>
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input type="email" name="email" ng-model="credentials.email" md-maxlength="30" ng-pattern="/^.+@.+\..+$/" required />
+                    <div ng-messages="loginForm.email.$error" role="alert">
+                        <div ng-message="md-maxlength">Your e-mail can be at most 30 characters long.</div>
+                        <div ng-message="required,pattern">Please enter a valid e-mail address.</div>
+                    </div>
+                </md-input-container>
+                
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" name="password" ng-model="credentials.password" md-minlength="6" md-maxlength="20" required />
+                    <div ng-messages="loginForm.password.$error" role="alert">
+                        <div ng-message="required">Please enter your password.</div>
+                        <div ng-message="md-minlength">Too short.</div>
+                        <div ng-message="md-maxlength">Too long.</div>
+                    </div>
+                </md-input-container>
+                
+                <md-input-container class="md-block">
+                    <md-checkbox name="remember" ng-model="credentials.remember">
+                        <span class="md-caption">Remember me</span>
+                    </md-checkbox>
+                </md-input-container>
+                
+                <md-button type="submit" aria-label="Login" ng-hide="logging" ng-disabled="loginForm.$invalid" class="md-raised md-primary">&nbsp Login &nbsp</md-button>
+                
+                <md-progress-circular md-mode="indeterminate" ng-show="logging"></md-progress-circular>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

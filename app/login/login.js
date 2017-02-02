@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('economyApp.login', ['ui.router','economyApp.services'])
+angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
 
 .config(['$stateProvider', function($stateProvider) {
     
@@ -19,17 +19,43 @@ angular.module('economyApp.login', ['ui.router','economyApp.services'])
     $scope.credentials = {
         email: '',
         password: '',
-        username:'',
-        remember:false
+        remember:true
     };
-    
-    $scope.logging = false;
+    $scope.loginNotifications = [];
+    $scope.loginNotifications.loader = false;
+    $scope.loginNotifications.error = false;
     
     $scope.login = function () {
-        $scope.logging = true;
-        $rootScope.user = loginService.login($scope.credentials)
-        console.log($rootScope.user);
-        $state.go('economy.dashboard');
+        
+        $scope.loginNotifications.loader = true;
+        $scope.loginNotifications.error = false;
+        
+        loginService.signIn($scope.credentials)
+        
+            .then(function(response){
+            
+                switch(response.status){
+                        
+                    case 200:
+                    case 304:
+                        $rootScope.user = response.data;
+                        $state.go('economy.dashboard', { "id": $rootScope.user.lastYearId});
+                        break;
+                        
+                    default:
+                        //$scope.loginNotifications.error = "wrong-email";
+                        $scope.loginNotifications.error = "wrong-password";
+                }
+            
+                $scope.loginNotifications.loader = false;
+            
+            },function(error){
+            
+                $scope.loginNotifications.error = "general-error";
+                $scope.loginNotifications.loader = false;
+            
+            });
+        
     };
     
 }]);

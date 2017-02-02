@@ -6,10 +6,11 @@ angular.module('economyApp', [
   'ngMaterial',
   'ngMdIcons',
   'ngMessages',
-  'economyApp.services',
   'economyApp.menu',
   'economyApp.header',
   'economyApp.login',
+  'economyApp.login.services',
+  'economyApp.login.directives',
   'economyApp.dashboard'
 ]).
 

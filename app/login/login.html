@@ -10,32 +10,39 @@
             <form name="loginForm" ng-submit="login()" novalidate>
                 <md-input-container class="md-block">
                     <label>Email</label>
-                    <input type="email" name="email" ng-model="credentials.email" md-maxlength="30" ng-pattern="/^.+@.+\..+$/" required />
+                    <input type="email" name="email" ng-model="credentials.email" md-maxlength="30" ng-pattern="/^.+@.+\..+$/" ng-change="loginNotifications.error = false" check-credential required />
                     <div ng-messages="loginForm.email.$error" role="alert">
                         <div ng-message="md-maxlength">Your e-mail can be at most 30 characters long.</div>
                         <div ng-message="required,pattern">Please enter a valid e-mail address.</div>
+                        <div ng-message="check-credential">This e-mail address is not registered.</div>
                     </div>
+                        
                 </md-input-container>
                 
                 <md-input-container class="md-block">
                     <label>Password</label>
-                    <input type="password" name="password" ng-model="credentials.password" md-minlength="6" md-maxlength="20" required />
+                    <input type="password" name="password" ng-model="credentials.password" md-minlength="6" md-maxlength="20" ng-change="loginNotifications.error = false" check-credential required />
                     <div ng-messages="loginForm.password.$error" role="alert">
                         <div ng-message="required">Please enter your password.</div>
                         <div ng-message="md-minlength">Too short.</div>
                         <div ng-message="md-maxlength">Too long.</div>
+                        <div ng-message="check-credential">Incorrect password.</div>
                     </div>
                 </md-input-container>
                 
                 <md-input-container class="md-block">
-                    <md-checkbox name="remember" ng-model="credentials.remember">
-                        <span class="md-caption">Remember me</span>
-                    </md-checkbox>
+                    <md-switch ng-model="credentials.remember" aria-label="Remember?" name="remember">
+                        Remember me
+                    </md-switch>
                 </md-input-container>
                 
-                <md-button type="submit" aria-label="Login" ng-hide="logging" ng-disabled="loginForm.$invalid" class="md-raised md-primary">&nbsp Login &nbsp</md-button>
+                <div layout="column" flex ng-show="loginNotifications.error == 'general-error'" md-colors="{background: 'default-warn'}" layout-padding>
+                    <div flex>Login service currently unavailable.</div>
+                </div>
                 
-                <md-progress-circular md-mode="indeterminate" ng-show="logging"></md-progress-circular>
+                <md-button type="submit" aria-label="Login" ng-hide="login.loader" ng-disabled="loginForm.$invalid" class="md-raised md-primary">&nbsp Login &nbsp</md-button>
+                
+                <md-progress-circular md-mode="indeterminate" ng-show="login.loader"></md-progress-circular>
             </form>
         </md-card-content>
     </md-card>

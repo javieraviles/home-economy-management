@@ -18,6 +18,36 @@
                 "label":"Gasolina",
                 "id":"2",
                 "typeId":"36.2"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":"3",
+                "typeId":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":"2",
+                "typeId":"36.2"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":"3",
+                "typeId":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":"2",
+                "typeId":"36.2"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":"3",
+                "typeId":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":"2",
+                "typeId":"36.2"
             }
         ]
     }

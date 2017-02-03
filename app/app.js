@@ -6,6 +6,7 @@ angular.module('economyApp', [
   'ngMaterial',
   'ngMdIcons',
   'ngMessages',
+  'ngStorage',
   'economyApp.menu',
   'economyApp.header',
   'economyApp.login',
@@ -13,9 +14,11 @@ angular.module('economyApp', [
   'economyApp.month'
 ]).
 
-config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+config(['$stateProvider', '$urlRouterProvider','$locationProvider','$localStorageProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $localStorageProvider) {
     
     $locationProvider.hashPrefix('!');
+    
+    //$localStorageProvider.get('user');
     
     $stateProvider
     .state('economy', {
@@ -38,4 +41,8 @@ config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($st
     
     $urlRouterProvider.otherwise('/economy/login');
     
+}]).
+
+run(['$rootScope','$localStorage',function($rootScope,$localStorage){
+    $rootScope.user = $localStorage.user;
 }]);

@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('economyApp.header', ['ngMaterial'])
+angular.module('economyApp.header', ['ngMaterial','economyApp.login.services'])
 
 
-.controller('HeaderCtrl', ['$scope','$state','$mdSidenav','$rootScope',function($scope, $state, $mdSidenav, $rootScope) {
+.controller('HeaderCtrl', ['$scope','$state','$mdSidenav','$rootScope','loginService',function($scope, $state, $mdSidenav, $rootScope, loginService) {
     
     $scope.state = $state;
     
@@ -13,8 +13,7 @@ angular.module('economyApp.header', ['ngMaterial'])
     
     $scope.logout = function (){
         
-        delete $rootScope.user;
-        $state.go('economy.login');
+        loginService.signOut();
         
     }
 }]);

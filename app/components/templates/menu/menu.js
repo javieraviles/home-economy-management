@@ -3,16 +3,8 @@
 angular.module('economyApp.menu', [])
 
 
-.controller('MenuCtrl', ['$scope','$state', '$rootScope',function($scope, $state, $rootScope) {
+.controller('MenuCtrl', ['$scope', '$rootScope','$state',function($scope, $rootScope, $state) {
     
     $scope.state = $state;
-    $rootScope.user ? $scope.menu = $rootScope.user.menu : $scope.menu = "";
-    
-    $scope.$on('user-logged-in-successfully', function() {
-
-        $scope.menu = $rootScope.user.menu;
-        
-    });
-    
     
 }]);

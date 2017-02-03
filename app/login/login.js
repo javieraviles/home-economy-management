@@ -14,7 +14,7 @@ angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
     
 }])
 
-.controller('LoginCtrl', ['$scope','loginService','$state','$rootScope',function($scope, loginService, $state, $rootScope) {
+.controller('LoginCtrl', ['$scope','loginService','$state','$rootScope','$localStorage',function($scope, loginService, $state, $rootScope, $localStorage) {
     
     $scope.credentials = {
         email: '',
@@ -39,7 +39,8 @@ angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
                     case 200:
                     case 304:
                         $rootScope.user = response.data.user;
-                        $rootScope.$broadcast('user-logged-in-successfully');
+                        $localStorage.user = response.data.user;
+                        //$rootScope.$broadcast('user-logged-in-successfully');
                         $state.go('economy.year', { "id": $rootScope.user.lastYearId});
                         break;
                         

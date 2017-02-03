@@ -23,7 +23,7 @@
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <md-sidenav layout="column" ng-hide ="state.$current.hideSidenav" ui-view name="menu" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
+        <md-sidenav id="side-menu" layout="column" ng-hide ="state.$current.hideSidenav" ui-view name="menu" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
         
         
         
@@ -49,5 +49,6 @@
         <script src="login/login_services.js"></script>
         <script src="login/login_directives.js"></script>
         <script src="year/year.js"></script>
+        <script src="year/year_services.js"></script>
     </body>
 </html>

@@ -4,6 +4,19 @@
         "password":"wowpass89",
         "email":"avileslopez.javier@gmail.com",
         "remember":true,
-        "lastYearId":3
+        "currency":"&euro;",
+        "lastYearId":1,
+        "menu": {
+            "years":  [
+                {
+                    "label":"2016",
+                    "id":"1"
+                },
+                {
+                    "label":"2017",
+                    "id":"2"
+                }
+            ]
+        }
     }
 }

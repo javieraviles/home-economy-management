@@ -10,3 +10,10 @@
 #login-box md-card {
     min-height: 400px;
 }
+
+#side-menu a.md-button {
+    display: block;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+}

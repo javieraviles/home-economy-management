@@ -7,7 +7,6 @@ angular.module('economyApp', [
   'ngMdIcons',
   'ngMessages',
   'ngStorage',
-  'mdDataTable',
   'economyApp.menu',
   'economyApp.header',
   'economyApp.login',

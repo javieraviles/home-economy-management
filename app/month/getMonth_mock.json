@@ -1,53 +1,44 @@
 {
     "month": {
         "id":1,
-        "label":"2017",
+        "label":"January",
         "savings":"12344.12",
-        "payments": [
+        "expenses": [
             {
                 "label":"Compra supermercado",
-                "id":"1",
-                "typeId":"38.5"
+                "id":1,
+                "typeId":1,
+                "amount":"38.5"
             },
             {
                 "label":"Pago electricidad",
-                "id":"3",
-                "typeId":"78.5"
+                "id":2,
+                "typeId":3,
+                "amount":"78.5"
             },
             {
                 "label":"Gasolina",
-                "id":"2",
-                "typeId":"36.2"
+                "id":3,
+                "typeId":2,
+                "amount":"36.2"
+            },
+            {
+                "label":"Compra supermercado",
+                "id":4,
+                "typeId":1,
+                "amount":"38.5"
             },
             {
                 "label":"Pago electricidad",
-                "id":"3",
-                "typeId":"78.5"
+                "id":5,
+                "typeId":3,
+                "amount":"78.5"
             },
             {
                 "label":"Gasolina",
-                "id":"2",
-                "typeId":"36.2"
-            },
-            {
-                "label":"Pago electricidad",
-                "id":"3",
-                "typeId":"78.5"
-            },
-            {
-                "label":"Gasolina",
-                "id":"2",
-                "typeId":"36.2"
-            },
-            {
-                "label":"Pago electricidad",
-                "id":"3",
-                "typeId":"78.5"
-            },
-            {
-                "label":"Gasolina",
-                "id":"2",
-                "typeId":"36.2"
+                "id":6,
+                "typeId":2,
+                "amount":"36.2"
             }
         ]
     }

@@ -13,7 +13,7 @@ angular.module('economyApp.month.services', [])
     function _getMonth (monthId) {
 
         //return $http.get(endpoint + monthId);
-        return $http.get('/month/getMonth_mock.json');
+        return $http.get('./month/getMonth_mock.json');
 
     }
     

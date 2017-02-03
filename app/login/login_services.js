@@ -14,7 +14,7 @@ angular.module('economyApp.login.services', [])
     function _signIn (credentials) {
 
         //return $http.post(endpoint + 'signin', credentials);
-        return $http.get('/login/signin_mock.json');
+        return $http.get('./login/signin_mock.json');
 
     }
     

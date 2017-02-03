@@ -22,21 +22,25 @@
             {
                 "label":"Alimentación",
                 "id":1,
+                "icon":"restaurant",
                 "color":"5cb85c"
             },
             {
                 "label":"Transporte",
                 "id":2,
+                "icon":"directions_car",
                 "color":"f0ad4e"
             },
             {
                 "label":"Vivienda",
                 "id":3,
+                "icon":"home",
                 "color":"d9534f"
             },
             {
-                "label":"Otros",
+                "label":"Social",
                 "id":4,
+                "icon":"mood",
                 "color":"5bc0de"
             }
         ]

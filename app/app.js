@@ -4,7 +4,6 @@
 angular.module('economyApp', [
   'ui.router',
   'ngMaterial',
-  'ngMdIcons',
   'ngMessages',
   'ngStorage',
   'economyApp.menu',
@@ -14,7 +13,14 @@ angular.module('economyApp', [
   'economyApp.month'
 ]).
 
-config(['$stateProvider', '$urlRouterProvider','$locationProvider','$localStorageProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $localStorageProvider) {
+config(['$stateProvider', '$urlRouterProvider','$locationProvider','$localStorageProvider','$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $localStorageProvider, $mdThemingProvider) {
+    
+    // Enable browser color
+    $mdThemingProvider.enableBrowserColor({
+      theme: 'default', // Default is 'default'
+      palette: 'primary', // Default is 'primary', any basic material palette and extended palettes are available
+      hue: '800' // Default is '800'
+    });
     
     $locationProvider.hashPrefix('!');
     

@@ -2,7 +2,7 @@
     <div >
         <h3>{{currentYear.label}} - savings: {{currentYear.savings}}{{user.currency}}</h3>
     </div>
-    <div flex layout="row" layout-xs="column" layout-wrap layout-padding>
+    <div flex layout="row" layout-xs="row" layout-wrap layout-padding>
         <md-card ui-sref="economy.month({id:{{month.id}}})" flex="30" flex-xs="100" ng-repeat="month in currentYear.months">
             <md-card-title>
                 <md-card-title-text>

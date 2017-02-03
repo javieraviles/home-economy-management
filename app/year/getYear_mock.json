@@ -18,6 +18,51 @@
                 "label":"March",
                 "id":"3",
                 "savings": "543.52"
+            },
+            {
+                "label":"April",
+                "id":"4",
+                "savings":"603.5"
+            },
+            {
+                "label":"May",
+                "id":"5",
+                "savings":"202"
+            },
+            {
+                "label":"June",
+                "id":"6",
+                "savings": "543.52"
+            },
+            {
+                "label":"July",
+                "id":"7",
+                "savings":"603.5"
+            },
+            {
+                "label":"August",
+                "id":"8",
+                "savings":"202"
+            },
+            {
+                "label":"September",
+                "id":"9",
+                "savings": "543.52"
+            },
+            {
+                "label":"October",
+                "id":"10",
+                "savings":"603.5"
+            },
+            {
+                "label":"November",
+                "id":"11",
+                "savings":"202"
+            },
+            {
+                "label":"December",
+                "id":"12",
+                "savings": "543.52"
             }
         ]
     }

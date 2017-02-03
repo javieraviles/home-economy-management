@@ -12,7 +12,7 @@ angular.module('economyApp.year', ['ui.router','economyApp.year.services'])
   });
 }])
 
-.controller('YearCtrl', ['$scope', '$stateParams','yearService',function($scope, $stateParams, yearService) {
+.controller('YearCtrl', ['$scope', '$stateParams','yearService','$rootScope',function($scope, $stateParams, yearService, $rootScope) {
     
     $scope.currentYear = "";
     

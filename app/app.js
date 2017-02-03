@@ -9,9 +9,8 @@ angular.module('economyApp', [
   'economyApp.menu',
   'economyApp.header',
   'economyApp.login',
-  'economyApp.login.services',
-  'economyApp.login.directives',
-  'economyApp.year'
+  'economyApp.year',
+  'economyApp.month'
 ]).
 
 config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {

@@ -1,0 +1,24 @@
+{
+    "month": {
+        "id":1,
+        "label":"2017",
+        "savings":"12344.12",
+        "payments": [
+            {
+                "label":"Compra supermercado",
+                "id":"1",
+                "typeId":"38.5"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":"3",
+                "typeId":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":"2",
+                "typeId":"36.2"
+            }
+        ]
+    }
+}

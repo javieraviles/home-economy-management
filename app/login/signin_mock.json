@@ -4,7 +4,7 @@
         "password":"wowpass89",
         "email":"avileslopez.javier@gmail.com",
         "remember":true,
-        "currency":"&euro;",
+        "currency":"€",
         "lastYearId":1,
         "menu": {
             "years":  [
@@ -17,6 +17,28 @@
                     "id":"2"
                 }
             ]
-        }
+        },
+        "paymentsTypes": [
+            {
+                "label":"Alimentación",
+                "id":1,
+                "color":"5cb85c"
+            },
+            {
+                "label":"Transporte",
+                "id":2,
+                "color":"f0ad4e"
+            },
+            {
+                "label":"Vivienda",
+                "id":3,
+                "color":"d9534f"
+            },
+            {
+                "label":"Otros",
+                "id":4,
+                "color":"5bc0de"
+            }
+        ]
     }
 }

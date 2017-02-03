@@ -20,6 +20,7 @@ angular.module('economyApp.year', ['ui.router','economyApp.year.services'])
         .then(function(response){
 
             $scope.currentYear = response.data.year;
+            $rootScope.headerTitle = $scope.currentYear.label + ' - savings: '+ $scope.currentYear.savings+ $rootScope.user.currency;
 
         },function(error){
 

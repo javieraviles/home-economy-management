@@ -51,4 +51,5 @@ config(['$stateProvider', '$urlRouterProvider','$locationProvider','$localStorag
 
 run(['$rootScope','$localStorage',function($rootScope,$localStorage){
     $rootScope.user = $localStorage.user;
+    $rootScope.headerTitle = "EconomyAPP"
 }]);

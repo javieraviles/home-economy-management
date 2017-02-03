@@ -27,11 +27,11 @@
         
         
         
-        <div layout="column" layout-fill>
+        <div flex layout="column">
             
             <md-toolbar ng-hide ="state.$current.hideToolbar" ui-view name="header"></md-toolbar>
             
-            <div flex md-scroll-y ui-view name="content"></div>
+            <div flex ui-view name="content"></div>
             
         </div>
         

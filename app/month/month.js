@@ -55,7 +55,7 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
             label: '',
             amount: '',
             typeId: '1',
-            date: ''
+            date: new Date()
         };
         
         $scope.hide = function() {

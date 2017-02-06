@@ -21,6 +21,7 @@ angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
         password: '',
         remember:true
     };
+    
     $scope.loginNotifications = [];
     $scope.loginNotifications.loader = false;
     $scope.loginNotifications.error = false;

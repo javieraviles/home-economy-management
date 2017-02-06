@@ -14,12 +14,12 @@ angular.module('economyApp.login.services', [])
     function _signIn (credentials) {
 
         //return $http.post(endpoint + 'signin', credentials);
-        return $http.get('/login/signin_mock.json');
+        return $http.get('./login/signin_mock.json');
 
     }
     
     function _signOut () {
-
+        //return $http.get(endpoint + 'signout');
         delete $rootScope.user;
         $localStorage.$reset();
         $state.go('economy.login');

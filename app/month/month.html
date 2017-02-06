@@ -1,5 +1,46 @@
-<md-content flex layout="column" ng-cloak="ng-cloak">
+<div flex layout="column">
     
-    {{currentMonth | json}}
+    <md-button class="md-fab md-fab-bottom-right" aria-label="New expense" ng-click="showAddExpense($event)">
+        <md-icon>add</md-icon>
+    </md-button>
     
-</md-content>
+    <md-toolbar class="md-hue-3"><!--md-scroll-shrink-->
+        <div class="md-toolbar-tools">
+            <h3><span>Expenses</span></h3>
+        </div>
+    </md-toolbar>
+
+    <md-content flex ng-cloak>
+
+            <md-list>
+
+                <md-list-item class="md-2-line" ng-repeat="expense in currentMonth.expenses track by expense.id" ng-click="null">
+
+                    <md-icon class="md-avatar">{{expense.icon}}</md-icon>
+
+                    <div class="md-list-item-text">
+                        <h3>{{ expense.label }}</h3>
+                        <p>{{ expense.amount }} {{user.currency}}</p>
+                    </div>
+
+                    <div class="md-secondary-container">
+                        <md-menu md-offset="0 -7">
+                            <md-button aria-label="Open more options menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+                                <md-icon>more_vert</md-icon>
+                            </md-button>
+                            <md-menu-content width="2">
+                                <md-menu-item>
+                                    <md-button aria-label="Remove expense" md-autofocus ng-click="deleteExpense(expense)">Remove</md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </div>
+
+                </md-list-item>
+
+            </md-list>
+        
+        
+
+    </md-content>
+</div>

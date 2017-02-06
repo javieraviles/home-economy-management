@@ -13,7 +13,7 @@ angular.module('economyApp.year.services', [])
     function _getYear (yearId) {
 
         //return $http.get(endpoint + yearId);
-        return $http.get('/year/getYear_mock.json');
+        return $http.get('./year/getYear_mock.json');
 
     }
     

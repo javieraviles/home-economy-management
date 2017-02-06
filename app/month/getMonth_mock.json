@@ -1,23 +1,104 @@
 {
     "month": {
         "id":1,
-        "label":"2017",
+        "label":"January",
         "savings":"12344.12",
-        "payments": [
+        "expenses": [
             {
                 "label":"Compra supermercado",
-                "id":"1",
-                "typeId":"38.5"
+                "id":1,
+                "typeId":1,
+                "icon":"restaurant",
+                "color":"5cb85c",
+                "amount":"38.5"
             },
             {
                 "label":"Pago electricidad",
-                "id":"3",
-                "typeId":"78.5"
+                "id":2,
+                "typeId":3,
+                "icon":"home",
+                "color":"d9534f",
+                "amount":"78.5"
             },
             {
                 "label":"Gasolina",
-                "id":"2",
-                "typeId":"36.2"
+                "id":3,
+                "typeId":2,
+                "icon":"directions_car",
+                "color":"f0ad4e",
+                "amount":"36.2"
+            },
+            {
+                "label":"Compra supermercado",
+                "id":4,
+                "typeId":1,
+                "icon":"restaurant",
+                "color":"5cb85c",
+                "amount":"38.5"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":5,
+                "typeId":3,
+                "icon":"home",
+                "color":"d9534f",
+                "amount":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":6,
+                "typeId":2,
+                "icon":"directions_car",
+                "color":"f0ad4e",
+                "amount":"36.2"
+            },
+            {
+                "label":"Cine",
+                "id":7,
+                "typeId":4,
+                "icon":"mood",
+                "color":"5bc0de",
+                "amount":"14.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":8,
+                "typeId":2,
+                "icon":"directions_car",
+                "color":"f0ad4e",
+                "amount":"36.2"
+            },
+            {
+                "label":"Compra supermercado",
+                "id":9,
+                "typeId":1,
+                "icon":"restaurant",
+                "color":"5cb85c",
+                "amount":"38.5"
+            },
+            {
+                "label":"Pago electricidad",
+                "id":10,
+                "typeId":3,
+                "icon":"home",
+                "color":"d9534f",
+                "amount":"78.5"
+            },
+            {
+                "label":"Gasolina",
+                "id":11,
+                "typeId":2,
+                "icon":"directions_car",
+                "color":"f0ad4e",
+                "amount":"36.2"
+            },
+            {
+                "label":"Cine",
+                "id":12,
+                "typeId":4,
+                "icon":"mood",
+                "color":"5bc0de",
+                "amount":"14.5"
             }
         ]
     }

@@ -41,4 +41,28 @@ angular.module('economyApp.month.services', [])
 
     }
     
+}])
+
+.factory('incomeService', ['$http', function($http) {
+    
+    var endpoint = "api/months/";
+    
+    return {
+        addIncome: _addIncome,
+        deleteIncome: _deleteIncome
+    }
+    
+    function _addIncome (monthId, income) {
+
+        //return $http.post(endpoint + monthId + 'incomes', income);
+        return income;
+
+    }
+    
+    function _deleteIncome (monthId, incomeId) {
+
+        //return $http.delete(endpoint + monthId + 'incomes' + incomeId);
+
+    }
+    
 }]);

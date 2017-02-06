@@ -100,6 +100,18 @@
                 "color":"5bc0de",
                 "amount":"14.5"
             }
+        ],
+        "incomes": [
+            {
+                "label":"Sueldo trabajo 1",
+                "id":1,
+                "amount":"1200.36"
+            },
+            {
+                "label":"Sueldo trabajo 2",
+                "id":2,
+                "amount":"1500"
+            }
         ]
     }
 }

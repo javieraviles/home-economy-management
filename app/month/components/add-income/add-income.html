@@ -1,0 +1,72 @@
+<md-dialog aria-label="Add income">
+  <form name="addIncomeForm" ng-cloak novalidate>
+      
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Add income</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        
+      <div class="md-dialog-content">
+          
+        <div layout-gt-xs="row">
+            
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Label</label>
+                <input name="label" ng-model="newIncome.label" required md-maxlength="20" minlength="4">
+                <div ng-messages="addIncomeForm.label.$error">
+                    <div ng-message="required">This is required!</div>
+                    <div ng-message="md-maxlength">That's too long!</div>
+                    <div ng-message="minlength">That's too short!</div>
+                </div>
+            </md-input-container>
+
+        </div>
+          
+        <div layout-gt-xs="row">
+            
+            <md-input-container class="md-icon-float md-icon-right md-block">
+                <label>Amount</label>
+                <input name="amount" ng-model="newIncome.amount" required type="number" step="0.01">
+                <md-icon>{{currency}}</md-icon>
+                <div ng-messages="addIncomeForm.amount.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Date</label>
+                <md-datepicker name="date" ng-model="newIncome.date" ng-required="true"></md-datepicker>
+                <div ng-messages="addIncomeForm.date.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+            
+        </div>
+          
+      </div>
+        
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        
+      <span flex></span>
+        
+      <md-button ng-click="cancel()">
+       Cancel
+      </md-button>
+        
+      <md-button ng-disabled="addIncomeForm.$invalid" ng-click="addItem(newIncome)" md-autofocus>
+        Save
+      </md-button>
+        
+    </md-dialog-actions>
+      
+  </form>
+</md-dialog>

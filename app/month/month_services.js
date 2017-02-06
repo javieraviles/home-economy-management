@@ -24,14 +24,20 @@ angular.module('economyApp.month.services', [])
     var endpoint = "api/months/";
     
     return {
-        addExpense: _addExpense
+        addExpense: _addExpense,
+        deleteExpense: _deleteExpense
     }
     
     function _addExpense (monthId, expense) {
 
         //return $http.post(endpoint + monthId + 'expenses', expense);
-        console.log(expense);
         return expense;
+
+    }
+    
+    function _deleteExpense (monthId, expenseId) {
+
+        //return $http.delete(endpoint + monthId + 'expenses' + expenseId);
 
     }
     

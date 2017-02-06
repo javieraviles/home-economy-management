@@ -38,11 +38,11 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
             clickOutsideToClose:true,
             fullscreen: true // Only for -xs, -sm breakpoints.
         })
-        .then(function(answer) {
-            answer.id=$scope.currentMonth.expenses.length +1;
-            answer.icon = 'home';
-            answer.color = 'd9534f';
-            $scope.currentMonth.expenses.push(expenseService.addExpense($stateParams.id, answer));
+        .then(function(expense) {
+            expense.id=$scope.currentMonth.expenses.length +1;
+            expense.icon = 'home';
+            expense.color = 'd9534f';
+            $scope.currentMonth.expenses.push(expenseService.addExpense($stateParams.id, expense));
             
         }, function() {
             console.log('You cancelled the dialog.');
@@ -54,7 +54,7 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
         $scope.newExpense = {
             label: '',
             amount: '',
-            typeId: '',
+            typeId: '1',
             date: ''
         };
         
@@ -66,12 +66,18 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
             $mdDialog.cancel();
         };
 
-        $scope.answer = function(answer) {
-            $mdDialog.hide(answer);
+        $scope.addExpense = function(expense) {
+            $mdDialog.hide(expense);
         };
         
         $scope.currency = $rootScope.user.currency_icon;
         $scope.expenses = $rootScope.user.expensesTypes;
-    }
+    };
+    
+    
+    $scope.deleteExpense = function (expense) {
+        expenseService.deleteExpense(expense.id);
+        $scope.currentMonth.expenses.splice($scope.currentMonth.expenses.indexOf(expense),1);
+    };
     
 }]);

@@ -25,12 +25,12 @@
 
                     <div class="md-secondary-container">
                         <md-menu md-offset="0 -7">
-                            <md-button aria-label="Open more menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+                            <md-button aria-label="Open more options menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
                                 <md-icon>more_vert</md-icon>
                             </md-button>
                             <md-menu-content width="2">
-                                <md-menu-item ng-repeat="item in [1, 2]">
-                                    <md-button> <span md-menu-align-target>Option</span> {{item}} </md-button>
+                                <md-menu-item>
+                                    <md-button aria-label="Remove expense" md-autofocus ng-click="deleteExpense(expense)">Remove</md-button>
                                 </md-menu-item>
                             </md-menu-content>
                         </md-menu>

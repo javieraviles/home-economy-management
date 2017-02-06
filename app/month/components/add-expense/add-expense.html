@@ -1,5 +1,5 @@
 <md-dialog aria-label="Add expense">
-  <form name="addExpense" ng-cloak novalidate>
+  <form name="addExpenseForm" ng-cloak novalidate>
       
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -18,7 +18,7 @@
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Label</label>
                 <input name="label" ng-model="newExpense.label" required md-maxlength="20" minlength="4">
-                <div ng-messages="addExpense.label.$error" ng-show="addExpense.label.$dirty">
+                <div ng-messages="addExpenseForm.label.$error" ng-show="addExpenseForm.label.$dirty">
                     <div ng-message="required">This is required!</div>
                     <div ng-message="md-maxlength">That's too long!</div>
                     <div ng-message="minlength">That's too short!</div>
@@ -29,7 +29,7 @@
                 <label>Amount</label>
                 <input name="amount" ng-model="newExpense.amount" required type="number" step="0.01">
                 <md-icon>{{currency}}</md-icon>
-                <div ng-messages="addExpense.amount.$error" ng-show="addExpense.amount.$dirty">
+                <div ng-messages="addExpenseForm.amount.$error" ng-show="addExpenseForm.amount.$dirty">
                     <div ng-message="required">This is required!</div>
                 </div>
             </md-input-container>
@@ -38,7 +38,7 @@
         <div layout-gt-xs="row">
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Category</label>
-                <md-select ng-model="newExpense.typeId">
+                <md-select name="type" ng-model="newExpense.typeId" aria-label="select type of expense" required>
                   <md-option ng-repeat="type in expenses" value="{{type.id}}">
                     {{type.label}}
                   </md-option>
@@ -47,7 +47,10 @@
 
             <md-input-container>
                 <label>Date</label>
-                <md-datepicker ng-model="newExpense.date"></md-datepicker>
+                <md-datepicker name="date" ng-model="newExpense.date" ng-required="true"></md-datepicker>
+                <div ng-messages="addExpenseForm.date.$error" ng-show="addExpenseForm.date.$dirty">
+                    <div ng-message="required">This is required!</div>
+                </div>
             </md-input-container>
         </div>
           
@@ -63,7 +66,7 @@
        Cancel
       </md-button>
         
-      <md-button ng-disabled="addExpense.$invalid" ng-click="answer(newExpense)" md-autofocus>
+      <md-button ng-disabled="addExpenseForm.$invalid" ng-click="addExpense(newExpense)" md-autofocus>
         Save
       </md-button>
         

@@ -23,15 +23,15 @@
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <md-sidenav id="side-menu" layout="column" ng-hide ="state.$current.hideSidenav" ui-view name="menu" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
+        <md-sidenav id="side-menu" layout="column" ng-hide="state.$current.hideSidenav" ui-view name="menu" class="md-sidenav-left md-whiteframe-8dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-cloak></md-sidenav>
         
         
         
         <div flex layout="column">
             
-            <md-toolbar ng-hide ="state.$current.hideToolbar" ui-view name="header"></md-toolbar>
+            <md-toolbar class="md-whiteframe-4dp" ng-hide="state.$current.hideToolbar" ui-view name="header" ng-cloak></md-toolbar>
             
-            <div flex ui-view name="content"></div>
+            <div flex ui-view name="content" ng-cloak></div>
             
         </div>
         

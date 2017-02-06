@@ -17,3 +17,14 @@
     text-rendering: optimizeLegibility;
     font-weight: 500;
 }
+
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+
+.user-avatar {
+  border-radius: 99%;
+}

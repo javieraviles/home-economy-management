@@ -2,7 +2,7 @@
     "month": {
         "id":1,
         "label":"January",
-        "savings":"12344.12",
+        "savings":"344.72",
         "expenses": [
             {
                 "label":"Compra supermercado",

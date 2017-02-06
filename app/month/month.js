@@ -19,7 +19,7 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
     monthService.getMonth($stateParams.id)
         .then(function(response){
             $scope.currentMonth = response.data.month;
-            $rootScope.headerTitle = $scope.currentMonth.label + ' - savings: '+ $scope.currentMonth.savings+ $rootScope.user.currency;
+            $rootScope.headerTitle = $scope.currentMonth.label + ' | '+ $scope.currentMonth.savings+ $rootScope.user.currency;
 
 
         },function(error){

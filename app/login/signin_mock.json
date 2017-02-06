@@ -5,6 +5,7 @@
         "email":"avileslopez.javier@gmail.com",
         "remember":true,
         "currency":"€",
+        "currency_icon":"euro_symbol",
         "lastYearId":1,
         "menu": {
             "years":  [

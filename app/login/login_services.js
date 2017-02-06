@@ -19,7 +19,7 @@ angular.module('economyApp.login.services', [])
     }
     
     function _signOut () {
-
+        //return $http.get(endpoint + 'signout');
         delete $rootScope.user;
         $localStorage.$reset();
         $state.go('economy.login');

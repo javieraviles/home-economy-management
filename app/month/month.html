@@ -12,13 +12,13 @@
 
                 <md-list>
 
-                    <md-list-item class="md-2-line" ng-repeat="expense in currentMonth.expenses track by expense.id" ng-click="null">
+                    <md-list-item class="md-2-line" ng-repeat="expense in currentMonth.expenses | filter:$root.globalSearch track by expense.id" ng-click="null">
 
                         <md-icon class="md-avatar">{{expense.icon}}</md-icon>
 
                         <div class="md-list-item-text">
                             <h3>{{ expense.label }}</h3>
-                            <p>{{ expense.amount }} {{user.currency}}</p>
+                            <p>{{ expense.amount }} {{$root.user.currency}}</p>
                         </div>
 
                         <div class="md-secondary-container">
@@ -46,13 +46,13 @@
 
                 <md-list>
 
-                    <md-list-item class="md-2-line" ng-repeat="income in currentMonth.incomes track by income.id" ng-click="null">
+                    <md-list-item class="md-2-line" ng-repeat="income in currentMonth.incomes  | filter:$root.globalSearch  track by income.id" ng-click="null">
 
                         <md-icon class="md-avatar">trending_up</md-icon>
 
                         <div class="md-list-item-text">
                             <h3>{{ income.label }}</h3>
-                            <p>{{ income.amount }} {{user.currency}}</p>
+                            <p>{{ income.amount }} {{$root.user.currency}}</p>
                         </div>
 
                         <div class="md-secondary-container">

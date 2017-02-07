@@ -1,10 +1,13 @@
 <!--<md-toolbar>-->
 
-    <div class="md-toolbar-tools">
+    <div class="md-toolbar-tools" ng-show="!showSearch">
         <md-button ng-click="openLeftMenu()" hide-gt-md aria-label="Menu">
             <small-user-avatar></small-user-avatar>
         </md-button>
         <h3 md-truncate flex>{{headerTitle}}</h3>
+        <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+            <md-icon>search</md-icon>
+          </md-button>
         <md-button class="md-icon-button" aria-label="Settings">
             <md-icon>settings</md-icon>
         </md-button>
@@ -13,4 +16,14 @@
         </md-button>
     </div>
 
+
+    <div class="md-toolbar-tools" ng-show="showSearch">
+        <md-button ng-click="showSearch = !showSearch" aria-label="Back">
+            <md-icon>arrow_back</md-icon>
+        </md-button>
+        <md-input-container md-theme="input" flex>
+            <label>&nbsp;</label>
+            <input ng-model="$root.globalSearch" placeholder="Enter search">
+        </md-input-container>
+    </div>
 <!--</md-toolbar>-->

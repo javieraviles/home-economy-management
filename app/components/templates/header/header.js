@@ -5,6 +5,8 @@ angular.module('economyApp.header', ['ngMaterial','economyApp.login.services'])
 
 .controller('HeaderCtrl', ['$scope','$state','$mdSidenav','$rootScope','loginService',function($scope, $state, $mdSidenav, $rootScope, loginService) {
     
+    $rootScope.globalSearch = "";
+    
     $scope.state = $state;
     
     $scope.openLeftMenu = function() {

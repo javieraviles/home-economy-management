@@ -50,7 +50,7 @@
 
             <md-input-container>
                 <label>Date</label>
-                <md-datepicker name="date" ng-model="newExpense.date" ng-required="true"></md-datepicker>
+                <md-datepicker name="date" ng-model="newExpense.date" ng-required="true" md-open-on-focus></md-datepicker>
                 <div ng-messages="addExpenseForm.date.$error">
                     <div ng-message="required">This is required!</div>
                 </div>

@@ -42,7 +42,7 @@
 
             <md-input-container>
                 <label>Date</label>
-                <md-datepicker name="date" ng-model="newIncome.date" ng-required="true"></md-datepicker>
+                <md-datepicker name="date" ng-model="newIncome.date" ng-required="true" md-open-on-focus></md-datepicker>
                 <div ng-messages="addIncomeForm.date.$error">
                     <div ng-message="required">This is required!</div>
                 </div>

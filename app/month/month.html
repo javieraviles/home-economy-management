@@ -13,8 +13,9 @@
                 <md-list>
 
                     <md-list-item class="md-2-line" ng-repeat="expense in currentMonth.expenses | filter:$root.globalSearch track by expense.id" ng-click="null">
-
-                        <md-icon class="md-avatar">{{expense.icon}}</md-icon>
+                        <div class="md-avatar transaction" layout-align="center center" style="background-color:#{{expense.color}};">
+                            <md-icon>{{expense.icon}}</md-icon>
+                        </div>
 
                         <div class="md-list-item-text">
                             <h3>{{ expense.label }}</h3>
@@ -48,7 +49,9 @@
 
                     <md-list-item class="md-2-line" ng-repeat="income in currentMonth.incomes  | filter:$root.globalSearch  track by income.id" ng-click="null">
 
-                        <md-icon class="md-avatar">trending_up</md-icon>
+                        <div class="md-avatar transaction income" layout-align="center center">
+                            <md-icon>trending_up</md-icon>
+                        </div>
 
                         <div class="md-list-item-text">
                             <h3>{{ income.label }}</h3>

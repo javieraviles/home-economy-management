@@ -22,8 +22,6 @@ config(['$stateProvider', '$urlRouterProvider','$locationProvider','$localStorag
       hue: '800' // Default is '800'
     });
     
-    $mdThemingProvider.theme('input', 'default')
-        .primaryPalette('grey');
     
     $locationProvider.hashPrefix('!');
     

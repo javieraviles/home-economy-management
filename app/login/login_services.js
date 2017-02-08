@@ -4,7 +4,7 @@ angular.module('economyApp.login.services', [])
 
 .factory('loginService', ['$http','$rootScope', '$localStorage', '$state', function($http, $rootScope, $localStorage, $state) {
     
-    var endpoint = "api/login/";
+    var endpoint = "api/users/";
     
     return {
         signIn: _signIn,
@@ -13,7 +13,7 @@ angular.module('economyApp.login.services', [])
     
     function _signIn (credentials) {
 
-        //return $http.post(endpoint + 'signin', credentials);
+        //return $http.get(endpoint + 'signin', credentials);
         return $http.get('./login/signin_mock.json');
 
     }

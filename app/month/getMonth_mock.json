@@ -9,7 +9,7 @@
                 "id":1,
                 "typeId":1,
                 "icon":"restaurant",
-                "color":"5cb85c",
+                "color":"009688",
                 "amount":"38.5"
             },
             {
@@ -17,7 +17,7 @@
                 "id":2,
                 "typeId":3,
                 "icon":"home",
-                "color":"d9534f",
+                "color":"9c27b0",
                 "amount":"78.5"
             },
             {
@@ -25,7 +25,7 @@
                 "id":3,
                 "typeId":2,
                 "icon":"directions_car",
-                "color":"f0ad4e",
+                "color":"deb867",
                 "amount":"36.2"
             },
             {
@@ -33,7 +33,7 @@
                 "id":4,
                 "typeId":1,
                 "icon":"restaurant",
-                "color":"5cb85c",
+                "color":"009688",
                 "amount":"38.5"
             },
             {
@@ -41,7 +41,7 @@
                 "id":5,
                 "typeId":3,
                 "icon":"home",
-                "color":"d9534f",
+                "color":"9c27b0",
                 "amount":"78.5"
             },
             {
@@ -49,7 +49,7 @@
                 "id":6,
                 "typeId":2,
                 "icon":"directions_car",
-                "color":"f0ad4e",
+                "color":"deb867",
                 "amount":"36.2"
             },
             {
@@ -57,7 +57,7 @@
                 "id":7,
                 "typeId":4,
                 "icon":"mood",
-                "color":"5bc0de",
+                "color":"03A9F4",
                 "amount":"14.5"
             },
             {
@@ -65,7 +65,7 @@
                 "id":8,
                 "typeId":2,
                 "icon":"directions_car",
-                "color":"f0ad4e",
+                "color":"deb867",
                 "amount":"36.2"
             },
             {
@@ -73,7 +73,7 @@
                 "id":9,
                 "typeId":1,
                 "icon":"restaurant",
-                "color":"5cb85c",
+                "color":"009688",
                 "amount":"38.5"
             },
             {
@@ -81,7 +81,7 @@
                 "id":10,
                 "typeId":3,
                 "icon":"home",
-                "color":"d9534f",
+                "color":"9c27b0",
                 "amount":"78.5"
             },
             {
@@ -97,7 +97,7 @@
                 "id":12,
                 "typeId":4,
                 "icon":"mood",
-                "color":"5bc0de",
+                "color":"03A9F4",
                 "amount":"14.5"
             }
         ],

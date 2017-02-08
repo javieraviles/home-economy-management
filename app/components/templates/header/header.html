@@ -14,12 +14,11 @@
     <div class="md-toolbar-tools" ng-show="showSearch">
         
         <md-button ng-click="showSearch = !showSearch;$root.globalSearch=''" aria-label="Back">
-            <md-icon style="color:rgb(158,158,158);">arrow_back</md-icon>
+            <md-icon style="color:rgb(63,81,181);">arrow_back</md-icon>
         </md-button>
         
-        <md-input-container class="md-block" md-theme="input" style="height: 25px;" flex>
-            <label>Enter search</label>
-            <input type="text" ng-model="$root.globalSearch" focus-when="showSearch" autocomplete="off">
+        <md-input-container md-no-float class="md-block" style="height: 25px;" flex>
+            <input type="text" ng-model="$root.globalSearch" placeholder="Search..." focus-when="showSearch" autocomplete="off">
         </md-input-container>
         
     </div>

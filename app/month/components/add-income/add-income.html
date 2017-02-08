@@ -3,10 +3,13 @@
       
     <md-toolbar>
       <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
         <h2>Add income</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon aria-label="Close dialog">close</md-icon>
+        <md-button class="md-icon-button" ng-disabled="addIncomeForm.$invalid" ng-click="addItem(newIncome)" md-autofocus>
+            <md-icon aria-label="Save Income">done</md-icon>
         </md-button>
       </div>
     </md-toolbar>
@@ -53,20 +56,6 @@
       </div>
         
     </md-dialog-content>
-
-    <md-dialog-actions layout="row">
-        
-      <span flex></span>
-        
-      <md-button ng-click="cancel()">
-       Cancel
-      </md-button>
-        
-      <md-button ng-disabled="addIncomeForm.$invalid" ng-click="addItem(newIncome)" md-autofocus>
-        Save
-      </md-button>
-        
-    </md-dialog-actions>
       
   </form>
 </md-dialog>

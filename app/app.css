@@ -56,3 +56,17 @@ md-toolbar.white-toolbar:not(.md-menu-toolbar) {
     background-color: rgb(255,255,255);
     color: rgba(0,0,0,0.87);
 }
+
+.transaction {
+    height:40px;
+    width:40px;
+}
+
+.transaction md-icon{
+    color: rgba(255,255,255,0.87);
+    margin-left: 7px;
+}
+
+.transaction.income {
+    background-color: #8bc34a;
+}

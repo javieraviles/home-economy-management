@@ -6,7 +6,7 @@
           <md-tab label="months">
             <md-content class="md-padding" layout="row" layout-wrap>
 
-                <md-card ui-sref="economy.month({id:{{month.id}}})" flex="30" flex-xs="100" ng-repeat="month in currentYear.months">
+                <md-card ui-sref="economy.month({id:{{month.id}}})" flex="30" flex-xs="100" ng-repeat="month in currentYear.months | filter:$root.globalSearch track by month.id">
                     <md-card-title>
                         <md-card-title-text>
                             <span class="md-headline">{{month.label}}</span>

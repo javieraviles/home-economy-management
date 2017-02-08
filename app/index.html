@@ -29,7 +29,7 @@
         
         <div flex layout="column">
             
-            <md-toolbar class="md-whiteframe-4dp" ng-hide="state.$current.hideToolbar" ui-view name="header" ng-cloak></md-toolbar>
+            <md-toolbar class="md-whiteframe-4dp" ng-class="showSearch ? 'white-toolbar' : ''" ng-hide="state.$current.hideToolbar" ui-view name="header" ng-cloak></md-toolbar>
             
             <div flex ui-view name="content" ng-cloak></div>
             
@@ -44,7 +44,9 @@
         <script src="bower_components/ngstorage/ngStorage.min.js"></script>
         <script src="app.js"></script>
         <script src="components/templates/menu/menu.js"></script>
+        <script src="components/templates/menu/menu_directives.js"></script>
         <script src="components/templates/header/header.js"></script>
+        <script src="components/templates/header/header_directives.js"></script>
         <script src="login/login.js"></script>
         <script src="login/login_services.js"></script>
         <script src="login/login_directives.js"></script>

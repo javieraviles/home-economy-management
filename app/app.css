@@ -52,3 +52,7 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
  
+md-toolbar.white-toolbar:not(.md-menu-toolbar) {
+    background-color: rgb(255,255,255);
+    color: rgba(0,0,0,0.87);
+}

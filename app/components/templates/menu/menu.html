@@ -10,7 +10,7 @@
     </md-toolbar>
     <md-list>
         <md-list-item ng-repeat="year in user.menu.years track by year.id">
-            <a flex class="md-button" ui-sref="economy.year({id:{{year.id}}})">
+            <a flex class="md-button" ui-sref="economy.year({id:{{year.id}}})" ng-click="closeMenu();">
                 <md-item-content md-ink-ripple layout="row" layout-align="start center">
                     <div class="inset">
                         <md-icon>dashboard</md-icon>
@@ -19,5 +19,31 @@
                 </md-item-content>
             </a>
         </md-list-item>
+        
+        <md-divider ></md-divider>
+        <md-subheader class="md-no-sticky">Management</md-subheader>
+        
+        <md-list-item>
+            <a flex class="md-button" aria-label="Settings" ng-click="closeMenu();">
+                <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>settings</md-icon>
+                    </div>
+                    <div class="inset">Settings</div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+        
+        <md-list-item>
+            <a flex class="md-button" aria-label="Log out" ng-click="logout();closeMenu();">
+                <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>power_settings_new</md-icon>
+                    </div>
+                    <div class="inset">Sign Out</div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+        
     </md-list>
 <!--</md-sidenav>-->

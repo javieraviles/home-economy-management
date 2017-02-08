@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('economyApp.login', ['ui.router','economyApp.login.services'])
+angular.module('economyApp.login', ['ui.router','economyApp.login.services','economyApp.login.directives'])
 
 .config(['$stateProvider', function($stateProvider) {
     

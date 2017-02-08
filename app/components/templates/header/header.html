@@ -7,23 +7,20 @@
         <h3 md-truncate flex>{{headerTitle}}</h3>
         <md-button aria-label="Search" ng-click="showSearch = !showSearch">
             <md-icon>search</md-icon>
-          </md-button>
-        <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon>settings</md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="Log out" ng-click="logout();">
-            <md-icon>power_settings_new</md-icon>
         </md-button>
     </div>
 
 
     <div class="md-toolbar-tools" ng-show="showSearch">
-        <md-button ng-click="showSearch = !showSearch" aria-label="Back">
-            <md-icon>arrow_back</md-icon>
+        
+        <md-button ng-click="showSearch = !showSearch;$root.globalSearch=''" aria-label="Back">
+            <md-icon style="color:rgb(158,158,158);">arrow_back</md-icon>
         </md-button>
-        <md-input-container md-theme="input" flex>
-            <label>&nbsp;</label>
-            <input ng-model="$root.globalSearch" placeholder="Enter search">
+        
+        <md-input-container class="md-block" md-theme="input" style="height: 25px;" flex>
+            <label>Enter search</label>
+            <input type="text" ng-model="$root.globalSearch" focus-when="showSearch" autocomplete="off">
         </md-input-container>
+        
     </div>
 <!--</md-toolbar>-->

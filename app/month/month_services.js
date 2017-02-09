@@ -57,12 +57,20 @@ angular.module('economyApp.month.services', [])
     
     return {
         addIncome: _addIncome,
-        deleteIncome: _deleteIncome
+        deleteIncome: _deleteIncome,
+        updateIncome: _updateIncome
     }
     
     function _addIncome (monthId, income) {
 
         //return $http.post(endpoint + monthId + 'incomes', income);
+        return income;
+
+    }
+    
+    function _updateIncome (monthId, income) {
+
+        //return $http.put(endpoint + monthId + 'incomes', income);
         return income;
 
     }

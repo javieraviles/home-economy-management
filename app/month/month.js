@@ -57,8 +57,12 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
                     $scope.currentMonth.expenses.push(expenseService.addExpense($stateParams.id, newItem));
                 }
             }else{
-                newItem.id=$scope.currentMonth.incomes.length +1;
-                $scope.currentMonth.incomes.push(incomeService.addIncome($stateParams.id, newItem));
+                if(transaction)
+                    $scope.currentMonth.incomes[$scope.currentMonth.incomes.indexOf(transaction)]=incomeService.updateIncome($stateParams.id, newItem);
+                else{
+                    newItem.id=$scope.currentMonth.incomes.length +1;
+                    $scope.currentMonth.incomes.push(incomeService.addIncome($stateParams.id, newItem));
+                }
             }
             
         }, function() {

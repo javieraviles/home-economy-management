@@ -8,7 +8,7 @@
         </md-button>
         <h2>Add income</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-disabled="addIncomeForm.$invalid" ng-click="addItem(newIncome)" md-autofocus>
+        <md-button class="md-icon-button" ng-disabled="addIncomeForm.$invalid&&!edit" ng-click="addItem(newIncome)" md-autofocus>
             <md-icon aria-label="Save Income">done</md-icon>
         </md-button>
       </div>

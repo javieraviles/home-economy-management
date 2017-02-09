@@ -29,13 +29,16 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
         });
     
 
-    $scope.showAddForm = function(tab, ev) { //tab==0 expenses, tab==1 incomes
+    $scope.showTransactionForm = function(tab, ev, transaction) { //tab==0 expenses, tab==1 incomes, if edit transaction, if add transaction = false
         
         var templateUrl = 'month/components/';
-        tab == 0 ? templateUrl += 'add-expense/add-expense.html' : templateUrl += 'add-income/add-income.html';
+        tab == 0 ? templateUrl += 'expense-form/expense-form.html' : templateUrl += 'income-form/income-form.html';
         
         $mdDialog.show({
             controller: DialogController,
+            locals: {
+                transaction: transaction
+            },
             templateUrl: templateUrl,
             parent: angular.element(document.body),
             targetEvent: ev,
@@ -45,10 +48,14 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
         .then(function(newItem) {
             
             if(tab==0) {
-                newItem.id=$scope.currentMonth.expenses.length +1;
-                newItem.icon = 'home';
-                newItem.color = 'd9534f';
-                $scope.currentMonth.expenses.push(expenseService.addExpense($stateParams.id, newItem));
+                if(transaction)
+                    $scope.currentMonth.expenses[$scope.currentMonth.expenses.indexOf(transaction)]=expenseService.updateExpense($stateParams.id, newItem);
+                else{
+                    newItem.id=$scope.currentMonth.expenses.length +1;
+                    newItem.icon = 'home';
+                    newItem.color = 'd9534f';
+                    $scope.currentMonth.expenses.push(expenseService.addExpense($stateParams.id, newItem));
+                }
             }else{
                 newItem.id=$scope.currentMonth.incomes.length +1;
                 $scope.currentMonth.incomes.push(incomeService.addIncome($stateParams.id, newItem));
@@ -59,23 +66,40 @@ angular.module('economyApp.month', ['ui.router','economyApp.month.services'])
         });
     };
 
-    function DialogController($scope, $mdDialog, $rootScope) {
+    function DialogController($scope, $mdDialog, $rootScope, transaction) {
         
-        $scope.newExpense = {
-            label: '',
-            amount: '',
-            typeId: '1',
-            date: new Date()
-        };
+        if(transaction){
+            
+            transaction.date=new Date(transaction.date);
+            
+            $scope.newExpense = transaction;
+            $scope.newIncome = transaction;
+            
+            $scope.edit=true;
+            
+        }
+        else{
+            
+            $scope.newExpense = {
+                label: '',
+                amount: '',
+                typeId: '1',
+                date: new Date()
+            };
+            
+            $scope.newIncome = {
+                label: '',
+                amount: '',
+                date: new Date()
+            };
+            
+            $scope.edit=false;
+        }
         
         $scope.currency = $rootScope.user.currency_icon;
         $scope.expenses = $rootScope.user.expensesTypes;
         
-        $scope.newIncome = {
-            label: '',
-            amount: '',
-            date: new Date()
-        };
+        
         
         $scope.hide = function() {
             $mdDialog.hide();

@@ -10,7 +10,8 @@
                 "typeId":1,
                 "icon":"restaurant",
                 "color":"009688",
-                "amount":"38.5"
+                "amount":38.5,
+                "date":"1/9/2017"
             },
             {
                 "label":"Pago electricidad",
@@ -18,7 +19,8 @@
                 "typeId":3,
                 "icon":"home",
                 "color":"9c27b0",
-                "amount":"78.5"
+                "amount":78.5,
+                "date":"1/9/2017"
             },
             {
                 "label":"Gasolina",
@@ -26,7 +28,8 @@
                 "typeId":2,
                 "icon":"directions_car",
                 "color":"deb867",
-                "amount":"36.2"
+                "amount":36.2,
+                "date":"1/9/2017"
             },
             {
                 "label":"Compra supermercado",
@@ -34,7 +37,8 @@
                 "typeId":1,
                 "icon":"restaurant",
                 "color":"009688",
-                "amount":"38.5"
+                "amount":38.5,
+                "date":"1/9/2017"
             },
             {
                 "label":"Pago electricidad",
@@ -42,7 +46,8 @@
                 "typeId":3,
                 "icon":"home",
                 "color":"9c27b0",
-                "amount":"78.5"
+                "amount":78.5,
+                "date":"5/9/2017"
             },
             {
                 "label":"Gasolina",
@@ -50,7 +55,8 @@
                 "typeId":2,
                 "icon":"directions_car",
                 "color":"deb867",
-                "amount":"36.2"
+                "amount":36.2,
+                "date":"4/9/2017"
             },
             {
                 "label":"Cine",
@@ -58,7 +64,8 @@
                 "typeId":4,
                 "icon":"mood",
                 "color":"03A9F4",
-                "amount":"14.5"
+                "amount":14.5,
+                "date":"1/9/2017"
             },
             {
                 "label":"Gasolina",
@@ -66,7 +73,8 @@
                 "typeId":2,
                 "icon":"directions_car",
                 "color":"deb867",
-                "amount":"36.2"
+                "amount":36.2,
+                "date":"2/9/2017"
             },
             {
                 "label":"Compra supermercado",
@@ -74,7 +82,8 @@
                 "typeId":1,
                 "icon":"restaurant",
                 "color":"009688",
-                "amount":"38.5"
+                "amount":38.5,
+                "date":"3/9/2017"
             },
             {
                 "label":"Pago electricidad",
@@ -82,7 +91,8 @@
                 "typeId":3,
                 "icon":"home",
                 "color":"9c27b0",
-                "amount":"78.5"
+                "amount":78.5,
+                "date":"1/9/2017"
             },
             {
                 "label":"Gasolina",
@@ -90,7 +100,8 @@
                 "typeId":2,
                 "icon":"directions_car",
                 "color":"f0ad4e",
-                "amount":"36.2"
+                "amount":36.2,
+                "date":"9/9/2017"
             },
             {
                 "label":"Cine",
@@ -98,19 +109,20 @@
                 "typeId":4,
                 "icon":"mood",
                 "color":"03A9F4",
-                "amount":"14.5"
+                "amount":14.5,
+                "date":"1/9/2017"
             }
         ],
         "incomes": [
             {
                 "label":"Sueldo trabajo 1",
                 "id":1,
-                "amount":"1200.36"
+                "amount":1200.36
             },
             {
                 "label":"Sueldo trabajo 2",
                 "id":2,
-                "amount":"1500"
+                "amount":1500
             }
         ]
     }

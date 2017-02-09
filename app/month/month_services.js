@@ -25,12 +25,20 @@ angular.module('economyApp.month.services', [])
     
     return {
         addExpense: _addExpense,
-        deleteExpense: _deleteExpense
+        deleteExpense: _deleteExpense,
+        updateExpense: _updateExpense
     }
     
     function _addExpense (monthId, expense) {
 
         //return $http.post(endpoint + monthId + 'expenses', expense);
+        return expense;
+
+    }
+    
+    function _updateExpense (monthId, expense) {
+
+        //return $http.put(endpoint + monthId + 'expenses', expense);
         return expense;
 
     }

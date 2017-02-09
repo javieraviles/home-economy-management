@@ -6,9 +6,9 @@
         <md-button class="md-icon-button" ng-click="cancel()">
             <md-icon aria-label="Close dialog">close</md-icon>
         </md-button>
-        <h2>Add expense</h2>
+        <h2>Expense</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-disabled="addExpenseForm.$invalid&&!edit" ng-click="addItem(newExpense)" md-autofocus>
+        <md-button class="md-icon-button" ng-disabled="addExpenseForm.$invalid" ng-click="addItem(newExpense)" md-autofocus>
             <md-icon aria-label="Save Expense">done</md-icon>
         </md-button>
       </div>
@@ -30,9 +30,12 @@
 
             <md-input-container class="md-icon-float md-icon-right md-block">
                 <label>Amount</label>
-                <input name="amount" ng-model="newExpense.amount" required type="number" step="0.01">
+                <input name="amount" ng-model="newExpense.amount" required type="number" step="0.001" min="0">
                 <md-icon>{{currency}}</md-icon>
                 <div ng-messages="addExpenseForm.amount.$error">
+                    <div ng-message="number">You did not enter a valid number</div>
+                    <div ng-message="min">You must not use negative values</div>
+                    <div ng-message="step">You can work with 0.001 steps</div>
                     <div ng-message="required">This is required!</div>
                 </div>
             </md-input-container>
@@ -41,10 +44,10 @@
         <div layout-gt-xs="row">
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Category</label>
-                <md-select name="type" ng-model="newExpense.typeId" aria-label="select type of expense" required>
-                  <md-option ng-repeat="type in expenses" value="{{type.id}}">
-                    {{type.label}}
-                  </md-option>
+                <md-select name="type" ng-model="newExpense.typeId" aria-label="Select type of expense" required>
+                    <md-option ng-repeat="type in expenses track by type.id" value="{{type.id}}">
+                        {{type.label}}
+                    </md-option>
                 </md-select>
                 <div ng-messages="addExpenseForm.type.$error">
                     <div ng-message="required">This is required!</div>

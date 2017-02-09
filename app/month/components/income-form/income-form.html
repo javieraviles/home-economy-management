@@ -6,7 +6,7 @@
         <md-button class="md-icon-button" ng-click="cancel()">
             <md-icon aria-label="Close dialog">close</md-icon>
         </md-button>
-        <h2>Add income</h2>
+        <h2>Income</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-disabled="addIncomeForm.$invalid" ng-click="addItem(newIncome)" md-autofocus>
             <md-icon aria-label="Save Income">done</md-icon>
@@ -36,9 +36,12 @@
             
             <md-input-container class="md-icon-float md-icon-right md-block" flex-gt-xs>
                 <label>Amount</label>
-                <input name="amount" ng-model="newIncome.amount" required type="number" step="0.01">
+                <input name="amount" ng-model="newIncome.amount" required type="number" step="0.001" min="0">
                 <md-icon>{{currency}}</md-icon>
                 <div ng-messages="addIncomeForm.amount.$error">
+                    <div ng-message="number">You did not enter a valid number</div>
+                    <div ng-message="min">You must not use negative values</div>
+                    <div ng-message="step">You can work with 0.001 steps</div>
                     <div ng-message="required">This is required!</div>
                 </div>
             </md-input-container>

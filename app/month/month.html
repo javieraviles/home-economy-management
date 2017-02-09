@@ -68,6 +68,9 @@
                                 </md-button>
                                 <md-menu-content width="2">
                                     <md-menu-item>
+                                        <md-button aria-label="Edit income" md-autofocus ng-click="showTransactionForm(selectedTab,$event,income)">Edit</md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
                                         <md-button aria-label="Remove income" md-autofocus ng-click="deleteIncome(income)">Remove</md-button>
                                     </md-menu-item>
                                 </md-menu-content>
